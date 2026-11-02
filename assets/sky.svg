@@ -1,0 +1,143 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#173f7a"/>
+      <stop offset="0.30" stop-color="#2f6cb3"/>
+      <stop offset="0.62" stop-color="#6fa6db"/>
+      <stop offset="0.85" stop-color="#b9daf2"/>
+      <stop offset="1" stop-color="#d6ebf8"/>
+    </linearGradient>
+    <radialGradient id="burst" cx="0.52" cy="0.18" r="0.55">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.95"/>
+      <stop offset="0.18" stop-color="#eaf5ff" stop-opacity="0.6"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="beam" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="cloudBlue" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5d93cf"/>
+      <stop offset="1" stop-color="#2a5893"/>
+    </linearGradient>
+    <linearGradient id="cloudDeep" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3f74b3"/>
+      <stop offset="1" stop-color="#1f477f"/>
+    </linearGradient>
+    <linearGradient id="tower" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="0.55" stop-color="#e6f1fb"/>
+      <stop offset="1" stop-color="#9cc0e6"/>
+    </linearGradient>
+    <linearGradient id="bldg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#4d7fb8"/>
+      <stop offset="1" stop-color="#2b5185"/>
+    </linearGradient>
+    <linearGradient id="bldgFar" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#7ea8d6"/>
+      <stop offset="1" stop-color="#5b88bd"/>
+    </linearGradient>
+    <filter id="puff" x="-20%" y="-40%" width="140%" height="180%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.012" numOctaves="5" seed="3" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="110" xChannelSelector="R" yChannelSelector="G" result="d"/>
+      <feGaussianBlur in="d" stdDeviation="2.5"/>
+    </filter>
+    <filter id="puffBig" x="-20%" y="-30%" width="140%" height="160%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.009" numOctaves="5" seed="11" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="150" xChannelSelector="R" yChannelSelector="G" result="d"/>
+      <feGaussianBlur in="d" stdDeviation="3"/>
+    </filter>
+    <linearGradient id="haze" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d6ebf8" stop-opacity="0"/><stop offset="0.45" stop-color="#d6ebf8" stop-opacity="0.35"/><stop offset="1" stop-color="#e3f1fb" stop-opacity="0.75"/></linearGradient>
+    <filter id="soft"><feGaussianBlur stdDeviation="18"/></filter>
+    <pattern id="rain" width="60" height="140" patternUnits="userSpaceOnUse" patternTransform="rotate(6)">
+      <line x1="10" y1="0" x2="10" y2="34" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1.2"/>
+      <line x1="42" y1="70" x2="42" y2="96" stroke="#ffffff" stroke-opacity="0.25" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <!-- sky -->
+  <rect width="1920" height="1080" fill="url(#sky)"/>
+  <rect width="1920" height="1080" fill="url(#burst)"/>
+
+  <!-- upper dark cloud deck, rim-lit underneath -->
+  <g filter="url(#puffBig)">
+    <ellipse cx="260" cy="90" rx="520" ry="120" fill="#fff5e0" fill-opacity="0.9"/>
+    <ellipse cx="250" cy="100" rx="510" ry="115" fill="url(#cloudDeep)"/>
+    <ellipse cx="1650" cy="62" rx="520" ry="110" fill="#fff5e0" fill-opacity="0.9"/>
+    <ellipse cx="1660" cy="70" rx="510" ry="105" fill="url(#cloudDeep)"/>
+  </g>
+
+  <!-- sun beams breaking through -->
+  <g filter="url(#soft)" opacity="0.9">
+    <polygon points="1000,120 760,1080 860,1080" fill="url(#beam)"/>
+    <polygon points="1000,120 940,1080 1010,1080" fill="url(#beam)"/>
+    <polygon points="1000,120 1080,1080 1170,1080" fill="url(#beam)"/>
+    <polygon points="1000,120 1260,1080 1330,1080" fill="url(#beam)"/>
+  </g>
+
+  <!-- towering bright cumulus behind the beams -->
+  <g filter="url(#puffBig)">
+    <ellipse cx="1120" cy="300" rx="190" ry="170" fill="url(#tower)"/>
+    <ellipse cx="1030" cy="200" rx="130" ry="120" fill="#ffffff"/>
+    <ellipse cx="1220" cy="420" rx="230" ry="130" fill="url(#tower)"/>
+  </g>
+
+  <!-- mid cloud bands, blue bodies with warm rim light on top edges -->
+  <g filter="url(#puff)">
+    <ellipse cx="380" cy="383" rx="430" ry="92" fill="#fff8ea" fill-opacity="0.92"/>
+    <ellipse cx="380" cy="390" rx="425" ry="88" fill="url(#cloudBlue)"/>
+    <ellipse cx="640" cy="471" rx="300" ry="70" fill="#fff8ea" fill-opacity="0.92"/>
+    <ellipse cx="640" cy="478" rx="295" ry="66" fill="url(#cloudBlue)"/>
+    <ellipse cx="1600" cy="401" rx="400" ry="80" fill="#fff8ea" fill-opacity="0.92"/>
+    <ellipse cx="1600" cy="408" rx="395" ry="76" fill="url(#cloudBlue)"/>
+  </g>
+  <g filter="url(#puff)">
+    <ellipse cx="240" cy="590" rx="380" ry="70" fill="#fff3df" fill-opacity="0.9"/>
+    <ellipse cx="240" cy="596" rx="375" ry="66" fill="url(#cloudDeep)"/>
+    <ellipse cx="1500" cy="610" rx="480" ry="74" fill="#fff3df" fill-opacity="0.9"/>
+    <ellipse cx="1500" cy="616" rx="475" ry="70" fill="url(#cloudDeep)"/>
+    <ellipse cx="860" cy="658" rx="300" ry="50" fill="#fff3df" fill-opacity="0.9"/>
+    <ellipse cx="860" cy="664" rx="295" ry="46" fill="url(#cloudBlue)"/>
+  </g>
+
+  <!-- distant skyline, generic -->
+  <g fill="url(#bldgFar)" opacity="0.85">
+    <rect x="0" y="880" width="1920" height="200"/>
+    <rect x="60" y="800" width="90" height="80"/>
+    <rect x="210" y="770" width="70" height="110"/>
+    <rect x="330" y="815" width="120" height="65"/>
+    <rect x="520" y="790" width="80" height="90"/>
+    <rect x="1250" y="780" width="90" height="100"/>
+    <rect x="1400" y="810" width="140" height="70"/>
+    <rect x="1600" y="770" width="80" height="110"/>
+    <rect x="1760" y="800" width="110" height="80"/>
+  </g>
+  <!-- nearer towers, sunlit faces -->
+  <g>
+    <rect x="120" y="720" width="110" height="360" fill="url(#bldg)"/>
+    <rect x="230" y="740" width="40" height="340" fill="#25497a"/>
+    <rect x="400" y="770" width="150" height="310" fill="url(#bldg)"/>
+    <rect x="690" y="640" width="120" height="440" fill="url(#bldg)"/>
+    <rect x="690" y="640" width="120" height="8" fill="#ffe7b8" opacity="0.8"/>
+    <rect x="810" y="660" width="45" height="420" fill="#25497a"/>
+    <rect x="1440" y="690" width="140" height="390" fill="url(#bldg)"/>
+    <rect x="1440" y="690" width="140" height="8" fill="#ffe7b8" opacity="0.8"/>
+    <rect x="1580" y="705" width="40" height="375" fill="#25497a"/>
+    <rect x="1700" y="760" width="160" height="320" fill="url(#bldg)"/>
+  </g>
+  <!-- window lines -->
+  <g stroke="#cfe3f7" stroke-opacity="0.35" stroke-width="2">
+    <line x1="700" y1="680" x2="800" y2="680"/><line x1="700" y1="720" x2="800" y2="720"/>
+    <line x1="700" y1="760" x2="800" y2="760"/><line x1="700" y1="800" x2="800" y2="800"/>
+    <line x1="700" y1="840" x2="800" y2="840"/><line x1="700" y1="880" x2="800" y2="880"/>
+    <line x1="1450" y1="730" x2="1570" y2="730"/><line x1="1450" y1="770" x2="1570" y2="770"/>
+    <line x1="1450" y1="810" x2="1570" y2="810"/><line x1="1450" y1="850" x2="1570" y2="850"/>
+    <line x1="1450" y1="890" x2="1570" y2="890"/><line x1="130" y1="760" x2="220" y2="760"/>
+    <line x1="130" y1="800" x2="220" y2="800"/><line x1="130" y1="840" x2="220" y2="840"/>
+  </g>
+  <!-- haze over the city -->
+  <rect x="0" y="620" width="1920" height="460" fill="url(#haze)"/>
+
+  <!-- rain -->
+  <rect width="1920" height="1080" fill="url(#rain)"/>
+</svg>
