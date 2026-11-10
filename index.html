@@ -69,7 +69,7 @@
           <div class="card">
             <div class="icon"><i class="fa-solid fa-microchip"></i></div>
             <h3>Device Reliability</h3>
-            <p>Dynamic R<sub>DS(on)</sub>, C<sub>oss</sub>, threshold-voltage shift and ruggedness of p-GaN HEMTs, GITs, bidirectional GaN switches and SiC MOSFETs.</p>
+            <p>Dynamic R<sub>DS(on)</sub>, current collapse, C<sub>oss</sub>, threshold-voltage shift and ruggedness of p-GaN HEMTs, GITs, bidirectional GaN switches and SiC MOSFETs.</p>
           </div>
           <div class="card">
             <div class="icon"><i class="fa-solid fa-diagram-project"></i></div>
@@ -80,7 +80,7 @@
 
         <div class="panel">
           <h2 class="section">About</h2>
-          <p><b>Xinzhi (Berry) Liu</b> is a Postdoctoral Research Fellow in the School of Engineering, University of Warwick, working with Prof. Layi Alatise on the reliability and robustness of wide bandgap power semiconductor devices. His current work focuses on reverse-conduction behaviour and short-circuit ruggedness of 650 V GaN monolithic bidirectional switches, combining converter-level characterisation with device-level TCAD.</p>
+          <p><b>Xinzhi (Berry) Liu</b> is a Postdoctoral Research Fellow in the Power Electronics Reliability and Characterisation (PERC) Lab, School of Engineering, University of Warwick, working with Prof. Layi Alatise on the reliability and robustness of wide bandgap power semiconductor devices. His current work covers reverse conduction, current collapse and short-circuit ruggedness of 650 V GaN monolithic bidirectional switches, combining converter-level characterisation with device-level TCAD.</p>
           <p>He received his PhD in Electrical Power Engineering from Universiti Putra Malaysia in 2025, including an 18-month funded research attachment at the Southern University of Science and Technology (SUSTech), Shenzhen, with Prof. Mengyuan Hua. His thesis on dynamic on-resistance and multi-pulse output capacitance extraction in Schottky p-GaN HEMTs received the IEEE CASS Malaysia Chapter Best PhD Dissertation Award 2025. He also holds an MSc in Green Technology (Energy) with Distinction from Hong Kong Baptist University.</p>
           <p>Before his research career he worked on substation protection design and commissioning at Manitoba Hydro, Canada, which shaped how he thinks about protection, failure modes and safety margins.</p>
         </div>
@@ -88,6 +88,9 @@
         <div class="panel">
           <h2 class="section">Recent</h2>
           <ul class="news">
+            <li><span class="date">Nov 2026</span><span>First-author paper on a stress-dwell technique for current-collapse evaluation in bidirectional p-GaN HEMTs published (early access) in <i>IEEE Transactions on Device and Materials Reliability</i>.</span></li>
+            <li><span class="date">Nov 2026</span><span>Co-authored paper on the group's integrated robustness test system for wide bandgap devices published (early access) in <i>IEEE JESTPE</i>.</span></li>
+            <li><span class="date">Nov 2026</span><span><i>WiPDA Europe 2026</i> paper on 1200 V GaN/IGBT and SiC/IGBT hybrid switches published in IEEE Xplore (second author).</span></li>
             <li><span class="date">Oct 2026</span><span>Two <i>ECCE Europe 2026</i> papers published in IEEE Xplore: first author on third-quadrant dynamic on-resistance and thermal impedance of GaN e-HEMTs, and co-author on linear mode robustness of Si and SiC power MOSFETs.</span></li>
             <li><span class="date">Sep 2026</span><span>Presented at ECCE Europe 2026, Valencia, Spain.</span></li>
             <li><span class="date">Jun 2026</span><span>First-author paper on multi-pulse output capacitance extraction of p-GaN HEMTs published in <i>IEEE Transactions on Power Electronics</i>.</span></li>
@@ -99,6 +102,11 @@
 
         <h2 class="section" style="border:none;color:#fff;text-shadow:0 1px 6px rgba(22,50,79,.45)">Selected work</h2>
         <div class="cards">
+          <a class="card" href="https://doi.org/10.1109/TDMR.2026.3751157" target="_blank" rel="noopener">
+            <span class="tag">IEEE TDMR 2026</span>
+            <h3>Stress-dwell current collapse</h3>
+            <p>Isolated control of off-state stress, dwell time and current pulse in bidirectional 40 V p-GaN HEMTs.</p>
+          </a>
           <a class="card" href="https://doi.org/10.1109/TPEL.2026.3651976" target="_blank" rel="noopener">
             <span class="tag">IEEE TPEL 2026</span>
             <h3>Multi-pulse C<sub>oss</sub> extraction</h3>
@@ -108,11 +116,6 @@
             <span class="tag">ECCE Europe 2026</span>
             <h3>Third-quadrant R<sub>SD</sub> and Z<sub>th</sub></h3>
             <p>Converter-level pulse testing of reverse conduction in 650 V, 150 V and bidirectional 40 V GaN e-HEMTs.</p>
-          </a>
-          <a class="card" href="https://doi.org/10.1016/j.microrel.2023.115293" target="_blank" rel="noopener">
-            <span class="tag">Microelectronics Reliability 2024</span>
-            <h3>Oscillation in E-mode GaN</h3>
-            <p>Modelling and mitigating switching oscillation through parasitic inductance optimisation.</p>
           </a>
         </div>
       </section>
@@ -134,12 +137,12 @@
           <ul class="timeline">
             <li>
               <div class="tl-head"><span class="tl-role">Postdoctoral Research Fellow</span><span class="tl-when">Sep 2025 to present</span></div>
-              <div class="tl-where">School of Engineering, University of Warwick, UK</div>
+              <div class="tl-where">PERC Lab, School of Engineering, University of Warwick, UK</div>
               <ul>
-                <li>Evaluate commercial 40 to 650 V GaN devices (Schottky p-GaN HEMTs, GITs, single and dual gate bidirectional switches) under third-quadrant conduction, dynamic on-resistance, threshold-voltage shift and short-circuit stress.</li>
-                <li>Designed converter-level single-shot and repetitive pulse test platforms with isolated stress control and programmable timing.</li>
-                <li>Designed multi-board Altium adapters with isolated, Kelvin-referenced gate drivers and low-parasitic loops for UIS, surge and short-circuit testing.</li>
-                <li>Automated instrument control and batch post-processing; built LTspice electro-thermal models and Sentaurus TCAD simulations.</li>
+                <li>Built a converter-level third-quadrant test platform for 40 to 650 V GaN devices, free of prior off-state voltage stress: reverse-conduction voltage 8% to 35% above datasheet values, and trapping inflates apparent thermal impedance by up to 7 times (ECCE Europe 2026).</li>
+                <li>Developed an isolated stress-dwell technique for stress-history-dependent current collapse in bidirectional GaN HEMTs (IEEE TDMR 2026), now part of the group's integrated robustness test system (IEEE JESTPE 2026).</li>
+                <li>Lead test-platform development for 650 V dual-gate GaN bidirectional switches: multi-board Altium adapter with dual isolated, Kelvin-referenced gate drivers for short-circuit, UIS and surge testing, and a repetitive ZVS pulse platform.</li>
+                <li>Contribute to group studies on 1200 V SiC linear-mode robustness, SiC short-circuit and avalanche ruggedness (with GE Vernova) and 1200 V GaN/IGBT and SiC/IGBT hybrid switches.</li>
                 <li>UKRI-funded project <i>Circular Microgrids</i> (UKRI-320).</li>
               </ul>
             </li>
@@ -251,7 +254,7 @@
           <div class="card">
             <span class="tag">Current</span>
             <h3>Bidirectional GaN</h3>
-            <p>Reverse conduction and short-circuit ruggedness of 650 V monolithic bidirectional switches.</p>
+            <p>Reverse conduction, current collapse and short-circuit ruggedness of 650 V monolithic bidirectional switches.</p>
           </div>
           <div class="card">
             <span class="tag">Method</span>
@@ -271,14 +274,17 @@
           <h3 class="sub">GaN bidirectional switches and third-quadrant conduction · Warwick, 2025 to present</h3>
           <ul>
             <li>Inductor-charged pulse test system isolating the DUT from off-state stress before pulse injection, for dynamic third-quadrant resistance and apparent thermal impedance (<a href="https://doi.org/10.1109/ECCEEUROPE67962.2026.11737951" target="_blank" rel="noopener">ECCE Europe 2026</a>).</li>
+            <li>Isolated stress-dwell technique that sets off-state stress, dwell time and current pulse independently: off-state stress raises third-quadrant conduction voltage by up to 28% and conduction power by up to 42% in a 40 V bidirectional GaN HEMT (<a href="https://doi.org/10.1109/TDMR.2026.3751157" target="_blank" rel="noopener">IEEE TDMR 2026</a>).</li>
+            <li>GaN current-collapse function of the group's integrated robustness test system (<a href="https://doi.org/10.1109/JESTPE.2026.3751357" target="_blank" rel="noopener">IEEE JESTPE 2026</a>).</li>
             <li>Repetitive ZVS and short-circuit testing of 650 V single and dual gate bidirectional GaN, with custom adapter PCBs and STM32 gate sequencing.</li>
             <li>Sentaurus TCAD of p-GaN HEMT structures to interpret threshold and on-resistance shifts.</li>
           </ul>
 
-          <h3 class="sub">SiC ruggedness · Warwick collaborations, 2025 to present</h3>
+          <h3 class="sub">SiC ruggedness and hybrid switches · Warwick collaborations, 2025 to present</h3>
           <ul>
             <li>Linear-mode robustness of 1200 V Si and SiC MOSFETs (<a href="https://doi.org/10.1109/TPEL.2026.3715936" target="_blank" rel="noopener">IEEE TPEL</a>, <a href="https://doi.org/10.1109/ECCEEurope67962.2026.11738325" target="_blank" rel="noopener">ECCE Europe 2026</a>).</li>
             <li>Body-diode pulsed overcurrent SOA, short circuit and avalanche ruggedness (<a href="https://doi.org/10.1109/TED.2026.3671746" target="_blank" rel="noopener">IEEE TED</a>), with GE Vernova.</li>
+            <li>1200 V GaN e-HEMT/IGBT and SiC MOSFET/IGBT hybrid switches: the GaN hybrid cut total switching loss by 24% (<a href="https://doi.org/10.1109/WiPDAEurope69886.2026.11746958" target="_blank" rel="noopener">WiPDA Europe 2026</a>).</li>
           </ul>
 
           <h3 class="sub">Dynamic R<sub>DS(on)</sub> and C<sub>oss</sub> in p-GaN HEMTs · UPM and SUSTech, 2022 to 2025</h3>
@@ -308,8 +314,11 @@
   <script>
     // ---------- publications (edit here to add new papers) ----------
     const PUBS = [
+      { y: 2026, t: "j", f: true,  title: "A Stress-Dwell Technique for Current-Collapse Evaluation in Bidirectional Normally-Off p-GaN HEMTs", a: "X. Liu, H. Ayala, A. Mahmood, M. Zhang, J. Ortiz Gonzalez, O. Alatise", v: "IEEE Transactions on Device and Materials Reliability, early access", doi: "10.1109/TDMR.2026.3751157" },
       { y: 2026, t: "j", f: true,  title: "Output Capacitance Extraction of p-GaN HEMTs Under Multi Pulse Switching Across Variable Frequencies and Drain-Bias Stress", a: "X. Liu, J. Chen, S. Wang, S. Wu, Z. Jiang, M. A. M. Radzi, N. Azis, S. Shafie, M. Hua", v: "IEEE Transactions on Power Electronics, 41(6), 8927 to 8937", doi: "10.1109/TPEL.2026.3651976" },
       { y: 2026, t: "c", f: true,  title: "Evaluation of Third Quadrant Dynamic On-resistance and Thermal Impedance of GaN e-HEMTs using Converter Level Switching Tests", a: "X. Liu, H. Ayala, J. Ortiz Gonzalez, A. Deb, A. Mahmood, O. Alatise", v: "IEEE Energy Conversion Congress and Expo Europe (ECCE Europe), Valencia", doi: "10.1109/ECCEEUROPE67962.2026.11737951" },
+      { y: 2026, t: "j", f: false, title: "Integrated Robustness Test Systems of Wide Bandgap Power Devices", a: "O. Alatise, H. Ayala, X. Liu, A. Deb, A. Mahmood, S. Jahdi, J. Ortiz Gonzalez", v: "IEEE Journal of Emerging and Selected Topics in Power Electronics, early access", doi: "10.1109/JESTPE.2026.3751357" },
+      { y: 2026, t: "c", f: false, title: "Evaluation of 1200 V Wide Bandgap Hybrid Switches: SiC MOSFET vs GaN e-HEMT/Si-IGBT", a: "M. Zhang, X. Liu, H. Ayala, S. Jahdi, X. Yuan, O. Alatise", v: "IEEE Workshop on Wide Bandgap Power Devices and Applications in Europe (WiPDA Europe)", doi: "10.1109/WiPDAEurope69886.2026.11746958" },
       { y: 2026, t: "c", f: false, title: "Characterization of Linear Mode Robustness of Silicon and SiC Power MOSFETs", a: "A. Mahmood, H. Ayala, S. Jahdi, X. Liu, J. Ortiz-Gonzalez, O. Alatise", v: "IEEE Energy Conversion Congress and Expo Europe (ECCE Europe), Valencia", doi: "10.1109/ECCEEurope67962.2026.11738325" },
       { y: 2026, t: "j", f: false, title: "Linear Mode Robustness Analysis of 1200 V Silicon and SiC MOSFETs", a: "A. Mahmood, H. Ayala, H. Wan, X. Liu, J. Ortiz Gonzalez, S. Jahdi, X. Yuan, O. Alatise", v: "IEEE Transactions on Power Electronics, early access", doi: "10.1109/TPEL.2026.3715936" },
       { y: 2026, t: "j", f: false, title: "Correlations Between Body Diode Pulsed Overcurrent Safe Operating Area, Short Circuit, and Avalanche Ruggedness in SiC MOSFETs", a: "H. Ayala, J. Ortiz Gonzalez, A. Deb, A. H. Malik, S. Jahdi, H. Wan, X. Liu, O. Alatise", v: "IEEE Transactions on Electron Devices, 73(6), 3308 to 3320", doi: "10.1109/TED.2026.3671746" },
